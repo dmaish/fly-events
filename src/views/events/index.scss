@@ -1,0 +1,107 @@
+.mdl-layout--fixed-header>.mdl-layout__header {
+    z-index: 6;
+    background: #ffffff;
+  }
+
+  .mdl-layout__drawer-button{
+    color: #9417E2 !important;
+    outline: none;
+  }
+  .mdl-layout-title {
+      color: black;
+  }
+  
+    .has-drawer  .mdl-layout__drawer {
+        padding-top: 64px;
+        }
+  
+.mdl-layout--fixed-drawer:not(.is-small-screen)>.mdl-layout__header {
+    padding-left: 240px;
+    margin-left: 0;
+    width: 100%;
+}
+
+.page-content {
+    height: 100%;
+    width: 100%;
+    background: #F7F5FC;
+}
+
+.search-bar {
+    width: 35%;
+    height: 50%;
+    color: #9417E2;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    background:rgb(244, 224, 250);
+    font-weight: 500;
+
+    .search-input {
+        height: 85%;
+        width: 75%;
+        margin-left: 3%;
+        text-align: center;
+        outline: none;
+        font-size: 100%;
+        border: none;
+        color: #9417E2;
+        background:rgb(244, 224, 250);
+    }
+    .search-icon {
+        display: inline-block;
+        height: 90%;
+        width: 15%;
+        font-size: 10px;
+        text-align: center;
+        color: #9417E2!important;
+        font-size: 1.2em;
+        i {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.mdl-navigation {
+    position: relative;
+    top: 20%;
+    .nav-item {
+        height: 40px;  
+        line-height: 40px;
+        width: 70%;  
+        margin-bottom: 5px;
+        align-self: flex-end;
+        padding-left: 20%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        color: #9417E2;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .nav-item-active {
+        background:rgb(244, 224, 250);
+        color: #9417E2;
+    }
+}
+.avatar {
+    height: 2.7em;
+    width: 2.7em;
+    img {
+        height: 110%;
+        width: 110%;
+        border-radius: 50%;
+    }
+    
+}
+.logout-btn {
+    position: relative;
+    top: 75%;
+    text-align: center;
+    color: #9417E2;
+    font-weight: 500;
+    font-size: 16px;
+    left: -10%;
+    cursor: pointer;
+}
