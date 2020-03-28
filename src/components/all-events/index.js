@@ -4,6 +4,9 @@ import eventsDummyData from './../events-dummy-data';
 import './index.scss';
 
 export default class AllEvents extends Component {
+
+    stateHandler = this.props.stateHandler;
+
     renderTable = () => {
         return (
             <div className="table-section">
@@ -37,7 +40,7 @@ export default class AllEvents extends Component {
                                     <td className="mdl-data-table__cell--non-numeric">{event.end}</td>
                                     <td className="mdl-data-table__cell--non-numeric">{event.location}</td>
                                     <td className="mdl-data-table__cell--non-numeric"><span className="trash"><i class="fas fa-trash-alt"></i></span></td>
-                                    <td className="mdl-data-table__cell--non-numeric"><span className="more-link">more</span></td>
+                                    <td className="mdl-data-table__cell--non-numeric"><span className="more-link" onClick={() => this.stateHandler(index)}>more</span></td>
                                 </tr>
                             )
                         )}

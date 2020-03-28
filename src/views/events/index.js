@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
 
 import AllEvents from './../../components/all-events';
+import Event from './../../components/event';
 import './index.scss';
 
 export default class Events extends Component {
+    state = {
+        activePage: "allEvents",
+        singleEventIndex: null,
+    }
+
+    stateHandler = (singleEventIndex=null) => {
+        const { activePage } = this.state;
+        if ( activePage === "allEvents"){
+            this.setState({activePage: "singleEvent", singleEventIndex});
+        } else if ( activePage === "singeEvent" ){
+            this.setState({activePage: "allEvents", singleEventIndex});
+        }
+    }
 
     render() {
+        const { activePage, singleEventIndex } = this.state;
+        console.log('*++after func runs'.repeat(7), this.state);
         return(
             <div className="mdl-layout mdl-js-layout  mdl-layout--fixed-header">
                 <header className="mdl-layout__header">
@@ -33,7 +49,12 @@ export default class Events extends Component {
                 </div>
                 <main className="mdl-layout__content">
                     <div className="page-content">
-                        <AllEvents />
+                        {
+                            activePage === "singleEvent" ? 
+                                <Event stateHandler={this.stateHandler} singleEventIndex={singleEventIndex}/> 
+                                    : 
+                                <AllEvents stateHandler={this.stateHandler} singleEventIndex={singleEventIndex} />
+                        }
                     </div>
                 </main>
             </div>
