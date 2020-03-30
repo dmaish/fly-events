@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fly-events/static/css/main.5a139161.chunk.css",
+    "main.js": "/fly-events/static/js/main.68bda84b.chunk.js",
+    "main.js.map": "/fly-events/static/js/main.68bda84b.chunk.js.map",
+    "runtime-main.js": "/fly-events/static/js/runtime-main.9a113942.js",
+    "runtime-main.js.map": "/fly-events/static/js/runtime-main.9a113942.js.map",
+    "static/js/2.46fd1a5f.chunk.js": "/fly-events/static/js/2.46fd1a5f.chunk.js",
+    "static/js/2.46fd1a5f.chunk.js.map": "/fly-events/static/js/2.46fd1a5f.chunk.js.map",
+    "index.html": "/fly-events/index.html",
+    "precache-manifest.1dccbbbc8f0f0556e7d0e1dd24036d6d.js": "/fly-events/precache-manifest.1dccbbbc8f0f0556e7d0e1dd24036d6d.js",
+    "service-worker.js": "/fly-events/service-worker.js",
+    "static/css/main.5a139161.chunk.css.map": "/fly-events/static/css/main.5a139161.chunk.css.map",
+    "static/js/2.46fd1a5f.chunk.js.LICENSE.txt": "/fly-events/static/js/2.46fd1a5f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a113942.js",
+    "static/js/2.46fd1a5f.chunk.js",
+    "static/css/main.5a139161.chunk.css",
+    "static/js/main.68bda84b.chunk.js"
+  ]
+}
