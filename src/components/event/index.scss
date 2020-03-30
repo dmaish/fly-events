@@ -18,8 +18,12 @@
             font-size: 15px;
             align-items: center;
 
-           i{
+            .link-span{
+                cursor: pointer;
+            }
+            i{
                 margin-right: 5px;
+                pointer-events: none;
             }
         }
 
@@ -76,5 +80,103 @@
     .details-section {
         width: 40%;
         height: 100%;
+
+        .details-article {
+            background: #ffffff;
+            width: 86%;
+            height: 50%;
+            margin-top: 9%;
+            margin-left: 7%;
+            margin-right: 7%;
+            
+            .title-sect {
+                display: flex;
+                align-items: center;
+                height: 12%;
+                width: 100%;
+                color: #9417E2;
+                font-weight: 600;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .details-sect {
+                height: 53%;
+                width: 100%;
+
+                .detail-wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    height: 20%;
+                    width: 100%;
+
+                    .detail-value, .detail-type {
+                        display: inline-block;
+                        width: 20%;
+                        color: grey;
+                    }
+                    .detail-value {
+                        color: black;
+                    }
+
+                }
+            }
+
+            .attendees-sect {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                height: 15%;
+                width: 100%;
+                color: #9417E2;
+                font-weight: 600;
+            }
+
+            .buttons-sect {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 20%;
+                width: 100%;
+                color: #9417E2;
+                button {
+                    outline: none;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    height: 70%;
+                    width: 30%;
+                    color: #9417E2;
+                    font-weight: 600;
+                    border: 1.5px solid #9417E2;
+                }
+            }
+        }
+    }
+
+    .comments-article {
+        height: 32%;
+        width: 80%;
+        margin: 10%;
+
+        .comments-title {
+            color: #9417E2;
+        }
+        .comment {
+            background: #ffffff;
+            height: 16%;
+            width: 83%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 1%;
+            padding: 15px;
+            border-radius: 5px;
+
+            .comment-owner {
+                display: flex;
+                justify-content: flex-end;
+                color: blue;
+            }
+        }
     }
 }

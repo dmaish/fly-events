@@ -11,6 +11,7 @@ export default class AllEvents extends Component {
         eventsData: eventsDummyData,
     }
     stateHandler = this.props.stateHandler;
+    dates = [];
 
     allEventsStateHandler = () => {
         this.forceUpdate();
@@ -50,7 +51,7 @@ export default class AllEvents extends Component {
                                     <td className="mdl-data-table__cell--non-numeric">{event.end}</td>
                                     <td className="mdl-data-table__cell--non-numeric">{event.location}</td>
                                     <td className="mdl-data-table__cell--non-numeric"><span className="trash"><i class="fas fa-trash-alt"></i></span></td>
-                                    <td className="mdl-data-table__cell--non-numeric"><span className="more-link" onClick={() => this.stateHandler(index)}>more</span></td>
+                                    <td className="mdl-data-table__cell--non-numeric"><span className="more-link" onClick={() => this.stateHandler(index, "singleEvent")}>more</span></td>
                                 </tr>
                             )
                         )}

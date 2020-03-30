@@ -6,17 +6,11 @@ import './index.scss';
 
 export default class Events extends Component {
     state = {
-        activePage: "allEvents",
         singleEventIndex: null,
     }
 
-    stateHandler = (singleEventIndex=null) => {
-        const { activePage } = this.state;
-        if ( activePage === "allEvents"){
-            this.setState({activePage: "singleEvent", singleEventIndex});
-        } else if ( activePage === "singeEvent" ){
-            this.setState({activePage: "allEvents", singleEventIndex});
-        }
+    stateHandler = (singleEventIndex=null, activePage) => {
+            this.setState(() => ({singleEventIndex, activePage: activePage, }));
     }
 
     render() {
