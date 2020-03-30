@@ -21,7 +21,6 @@ export default class Events extends Component {
 
     render() {
         const { activePage, singleEventIndex } = this.state;
-        console.log('*++after func runs'.repeat(7), this.state);
         return(
             <div className="mdl-layout mdl-js-layout  mdl-layout--fixed-header">
                 <header className="mdl-layout__header">

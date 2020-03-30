@@ -1,0 +1,80 @@
+.single-event-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .main-section {
+        width: 60%;
+        height: 100%;
+
+        .link-section {
+            display: flex;
+            height: 7%;
+            width: 100%;
+            color: #9417E2;
+            padding-left: 2%;
+            font-weight: 500;
+            font-size: 15px;
+            align-items: center;
+
+           i{
+                margin-right: 5px;
+            }
+        }
+
+        .carousel-section {
+            width: 96%;
+            height: 50%;
+            margin-left: 4%;
+            background: white;
+        }
+
+        .main-content-section {
+            height: 43%;
+            width: 96%;
+            margin-left: 4%;
+
+            .event-title {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 20%;
+                font-size: 27px;
+                color: #9417E2;
+                font-weight: 800;
+            }
+
+            .event-description {
+                width: 100%;
+                height: 45%;
+            }
+
+            .action-section {
+                display: flex;
+                width: 100%;
+                height: 35%;
+                justify-content: center;
+                align-items: center;
+                
+                button {
+                    text-align: center;
+                    width: 50%;
+                    height: 40%;
+                    background: #9417E2;
+                    font-size: 15px;
+                    color: #ffffff;
+                    font-weight: 500;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .details-section {
+        width: 40%;
+        height: 100%;
+    }
+}

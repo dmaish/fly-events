@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 
 import eventsDummyData from './../events-dummy-data';
+import EventsCalendar from './../../components/events-calendar';
+import AddForm from './../form';
 import './index.scss';
 
 export default class AllEvents extends Component {
 
+    state = {
+        eventsData: eventsDummyData,
+    }
     stateHandler = this.props.stateHandler;
 
+    allEventsStateHandler = () => {
+        this.forceUpdate();
+    }
+
     renderTable = () => {
+        const {eventsData} = this.state;
         return (
             <div className="table-section">
                 <div className="section-title">
@@ -29,7 +39,7 @@ export default class AllEvents extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {eventsDummyData.map(
+                        {eventsData.map(
                             (event, index) => (
                                 <tr>
                                     <td >{index + 1}.</td>
@@ -48,18 +58,32 @@ export default class AllEvents extends Component {
                     </table>
                 </div>
                 <div className="action-button-section">
-                    <button >
+                    {this.renderAddForm()}
+                    <button onClick={this.changeModalState }>
                         ADD NEW EVENT
                     </button>
                 </div>
             </div>
         );
     }
+
+    changeModalState = () => {
+        var dialog = document.querySelector('dialog');
+        dialog.showModal();
+    }
+
+    renderAddForm = () => {
+        return( 
+                <AddForm allEventsStateHandler={this.allEventsStateHandler}/>
+        );
+    }
+
     renderCalendar = () => {
         return (
             <div className="calendar-section">
                 <div class="section-title">
                     Events Calendar
+                    <EventsCalendar />
                 </div>
             </div>
         );
