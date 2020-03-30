@@ -17,11 +17,12 @@ const RegisterForm = (props) => {
             start: '',
             end: '',
             location: '',
+            description: '',
             photoUrl: '',
             },
             validationSchema: yupEventObj,
             onSubmit: values => {
-                const {initialValues, title, owner, date, start, end, location, photoUrl} = values;
+                const {initialValues, title, owner, date, start, end, location, description, photoUrl} = values;
                 console.log('formsub')
                 alert(JSON.stringify(values, null, 2));
                 const newEvent = {
@@ -32,6 +33,7 @@ const RegisterForm = (props) => {
                     start,
                     end,
                     location,
+                    description,
                     photoUrl
                 }
                 eventsDummyData.push(newEvent)

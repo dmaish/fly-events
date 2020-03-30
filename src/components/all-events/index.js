@@ -19,6 +19,9 @@ export default class AllEvents extends Component {
 
     renderTable = () => {
         const {eventsData} = this.state;
+        eventsData.forEach((eachEvent) => {
+            this.dates.push(eachEvent.date);
+        });
         return (
             <div className="table-section">
                 <div className="section-title">
@@ -84,7 +87,7 @@ export default class AllEvents extends Component {
             <div className="calendar-section">
                 <div class="section-title">
                     Events Calendar
-                    <EventsCalendar />
+                    <EventsCalendar dates={this.dates}/>
                 </div>
             </div>
         );

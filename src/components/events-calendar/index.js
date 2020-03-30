@@ -4,10 +4,11 @@ import {ThemeProvider} from 'styled-components';
 
 
 const EventsCalendar = (props) => {
+    const {dates} = props;
     return (
         <ThemeProvider theme={theme}>
             <DatePicker
-            selectedDays={['2019-11-03']} //initial selected days
+            selectedDays={dates} //initial selected days
             jalali={false}
             numberOfMonths={1}
             numberOfSelectableDays={0} // number of days you need 

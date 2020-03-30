@@ -8,7 +8,7 @@ export default class Event extends Component {
     render() {
 
         const {singleEventIndex, stateHandler} = this.props;
-        console.log('*++after func runs'.repeat(7), this.props);
+        console.log('*++after func runs'.repeat(7), eventsDummyData[singleEventIndex].description);
 
         return(
             <div className="single-event-page">
