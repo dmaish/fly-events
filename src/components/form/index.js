@@ -24,7 +24,7 @@ const RegisterForm = (props) => {
             onSubmit: values => {
                 const {initialValues, title, owner, date, start, end, location, description, photoUrl} = values;
                 console.log('formsub')
-                alert(JSON.stringify(values, null, 2));
+                // alert(JSON.stringify(values, null, 2));
                 const newEvent = {
                     initialValues,
                     title,
